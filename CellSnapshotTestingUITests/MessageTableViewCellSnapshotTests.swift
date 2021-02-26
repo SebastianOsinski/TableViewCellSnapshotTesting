@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sebastian Osiński. All rights reserved.
 //
 
-@testable import CellSnapshotTesting
+import OwnUIKit
 import FBSnapshotTestCase
 
 class MessageTableViewCellSnapshotTests: ViewSnapshotTestCase {

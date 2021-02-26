@@ -10,6 +10,7 @@
 		FC6D0D2E25E906B300597BC1 /* OwnUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6D0D2425E906B300597BC1 /* OwnUIKit.framework */; };
 		FC6D0D3325E906B300597BC1 /* OwnUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0D3225E906B300597BC1 /* OwnUIKitTests.swift */; };
 		FC6D0D3525E906B300597BC1 /* OwnUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6D0D2725E906B300597BC1 /* OwnUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC6D0D4325E9075500597BC1 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0D4225E9075500597BC1 /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		FC6D0D2D25E906B300597BC1 /* OwnUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OwnUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6D0D3225E906B300597BC1 /* OwnUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnUIKitTests.swift; sourceTree = "<group>"; };
 		FC6D0D3425E906B300597BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6D0D4225E9075500597BC1 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		FC6D0D2625E906B300597BC1 /* OwnUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FC6D0D4225E9075500597BC1 /* MessageTableViewCell.swift */,
 				FC6D0D2725E906B300597BC1 /* OwnUIKit.h */,
 				FC6D0D2825E906B300597BC1 /* Info.plist */,
 			);
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					FC6D0D2325E906B300597BC1 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					FC6D0D2C25E906B300597BC1 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6D0D4325E9075500597BC1 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		FC6D0D3925E906B300597BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -357,6 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		FC6D0D3A25E906B300597BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -389,6 +397,7 @@
 		FC6D0D3C25E906B300597BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OwnUIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +415,7 @@
 		FC6D0D3D25E906B300597BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OwnUIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

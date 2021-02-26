@@ -15,7 +15,6 @@
 		91EA9226231BD29000AA428A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA9224231BD29000AA428A /* LaunchScreen.storyboard */; };
 		91EA9231231BD29100AA428A /* LabelSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA9230231BD29100AA428A /* LabelSnapshotTests.swift */; };
 		91EA923D231C382300AA428A /* TableViewCellSnapshotContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA923C231C382300AA428A /* TableViewCellSnapshotContainer.swift */; };
-		91EA9243231D8B2000AA428A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA9242231D8B2000AA428A /* MessageTableViewCell.swift */; };
 		91EA9245231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA9244231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift */; };
 		A97286F35EAFA9AA9619BA2A /* Pods_CellSnapshotTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */; };
 		E384CD6592BD9AFAEDB9A36B /* Pods_CellSnapshotTestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958982F2CF77A26B143CA96B /* Pods_CellSnapshotTestingUITests.framework */; };
@@ -26,6 +25,8 @@
 		FC6D0D0325E8F42400597BC1 /* TableViewCellSnapshotContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFE25E8F42400597BC1 /* TableViewCellSnapshotContainer.swift */; };
 		FC6D0D0425E8F42400597BC1 /* LabelSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFF25E8F42400597BC1 /* LabelSnapshotTests.swift */; };
 		FC6D0D0525E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0D0025E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift */; };
+		FC6D0D4A25E9077A00597BC1 /* OwnUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6D0D4925E9077A00597BC1 /* OwnUIKit.framework */; };
+		FC6D0D4B25E9077A00597BC1 /* OwnUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC6D0D4925E9077A00597BC1 /* OwnUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC6D0D4C25E9077A00597BC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC6D0D4B25E9077A00597BC1 /* OwnUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0710515F20810D7706354A73 /* Pods-CellSnapshotTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellSnapshotTesting.release.xcconfig"; path = "Target Support Files/Pods-CellSnapshotTesting/Pods-CellSnapshotTesting.release.xcconfig"; sourceTree = "<group>"; };
 		29ABA30759FDC7832776EE90 /* Pods-CellSnapshotTestingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellSnapshotTestingUITests.release.xcconfig"; path = "Target Support Files/Pods-CellSnapshotTestingUITests/Pods-CellSnapshotTestingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +78,6 @@
 		91EA9230231BD29100AA428A /* LabelSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSnapshotTests.swift; sourceTree = "<group>"; };
 		91EA9232231BD29100AA428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91EA923C231C382300AA428A /* TableViewCellSnapshotContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSnapshotContainer.swift; sourceTree = "<group>"; };
-		91EA9242231D8B2000AA428A /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		91EA9244231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		958982F2CF77A26B143CA96B /* Pods_CellSnapshotTestingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellSnapshotTestingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCCBD843B7B56070BB9E6DF /* Pods-CellSnapshotTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellSnapshotTesting.debug.xcconfig"; path = "Target Support Files/Pods-CellSnapshotTesting/Pods-CellSnapshotTesting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +92,7 @@
 		FC6D0CFE25E8F42400597BC1 /* TableViewCellSnapshotContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSnapshotContainer.swift; sourceTree = "<group>"; };
 		FC6D0CFF25E8F42400597BC1 /* LabelSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelSnapshotTests.swift; sourceTree = "<group>"; };
 		FC6D0D0025E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
+		FC6D0D4925E9077A00597BC1 /* OwnUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OwnUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6D0D4A25E9077A00597BC1 /* OwnUIKit.framework in Frameworks */,
 				32A48225ED3D7E8909A43B9B /* Pods_CellSnapshotTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +140,7 @@
 		66D67F6EC7C6581FB407361C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC6D0D4925E9077A00597BC1 /* OwnUIKit.framework */,
 				50FD7FF5314FD8D83B8784ED /* Pods_CellSnapshotTesting.framework */,
 				D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */,
 				958982F2CF77A26B143CA96B /* Pods_CellSnapshotTestingUITests.framework */,
@@ -162,7 +179,6 @@
 				91EA9222231BD29000AA428A /* Assets.xcassets */,
 				91EA9224231BD29000AA428A /* LaunchScreen.storyboard */,
 				91EA9227231BD29000AA428A /* Info.plist */,
-				91EA9242231D8B2000AA428A /* MessageTableViewCell.swift */,
 			);
 			path = CellSnapshotTesting;
 			sourceTree = "<group>";
@@ -221,6 +237,7 @@
 				91EA9214231BD28E00AA428A /* Sources */,
 				91EA9215231BD28E00AA428A /* Frameworks */,
 				91EA9216231BD28E00AA428A /* Resources */,
+				FC6D0D4C25E9077A00597BC1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,7 +467,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91EA9243231D8B2000AA428A /* MessageTableViewCell.swift in Sources */,
 				91EA921E231BD28E00AA428A /* ViewController.swift in Sources */,
 				91EA921C231BD28E00AA428A /* AppDelegate.swift in Sources */,
 			);

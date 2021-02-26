@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MessageTableViewCell: UITableViewCell {
-    let avatar = UIView()
-    let label = UILabel()
+public class MessageTableViewCell: UITableViewCell {
+    public let avatar = UIView()
+    public let label = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
