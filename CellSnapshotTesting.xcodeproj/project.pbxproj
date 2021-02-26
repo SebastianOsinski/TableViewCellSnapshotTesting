@@ -20,10 +20,22 @@
 		A97286F35EAFA9AA9619BA2A /* Pods_CellSnapshotTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */; };
 		FC6D0CDA25E8EDEF00597BC1 /* ViewAssertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */; };
 		FC6D0CE325E8F25900597BC1 /* ViewSnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */; };
+		FC6D0D0125E8F42400597BC1 /* ViewSnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFC25E8F42400597BC1 /* ViewSnapshotTestCase.swift */; };
+		FC6D0D0225E8F42400597BC1 /* ViewAssertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFD25E8F42400597BC1 /* ViewAssertable.swift */; };
+		FC6D0D0325E8F42400597BC1 /* TableViewCellSnapshotContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFE25E8F42400597BC1 /* TableViewCellSnapshotContainer.swift */; };
+		FC6D0D0425E8F42400597BC1 /* LabelSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CFF25E8F42400597BC1 /* LabelSnapshotTests.swift */; };
+		FC6D0D0525E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0D0025E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		91EA922D231BD29100AA428A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91EA9210231BD28E00AA428A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91EA9217231BD28E00AA428A;
+			remoteInfo = CellSnapshotTesting;
+		};
+		FC6D0CEF25E8F3E100597BC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91EA9210231BD28E00AA428A /* Project object */;
 			proxyType = 1;
@@ -54,6 +66,14 @@
 		D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellSnapshotTestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssertable.swift; sourceTree = "<group>"; };
 		FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSnapshotTestCase.swift; sourceTree = "<group>"; };
+		FC6D0CEA25E8F3E100597BC1 /* CellSnapshotTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellSnapshotTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6D0CEE25E8F3E100597BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6D0CF725E8F42300597BC1 /* CellSnapshotTestingUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CellSnapshotTestingUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC6D0CFC25E8F42400597BC1 /* ViewSnapshotTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapshotTestCase.swift; sourceTree = "<group>"; };
+		FC6D0CFD25E8F42400597BC1 /* ViewAssertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAssertable.swift; sourceTree = "<group>"; };
+		FC6D0CFE25E8F42400597BC1 /* TableViewCellSnapshotContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSnapshotContainer.swift; sourceTree = "<group>"; };
+		FC6D0CFF25E8F42400597BC1 /* LabelSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelSnapshotTests.swift; sourceTree = "<group>"; };
+		FC6D0D0025E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +90,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97286F35EAFA9AA9619BA2A /* Pods_CellSnapshotTestingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6D0CE725E8F3E100597BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +128,7 @@
 			children = (
 				91EA921A231BD28E00AA428A /* CellSnapshotTesting */,
 				91EA922F231BD29100AA428A /* CellSnapshotTestingTests */,
+				FC6D0CEB25E8F3E100597BC1 /* CellSnapshotTestingUITests */,
 				91EA9219231BD28E00AA428A /* Products */,
 				3385943C50ECF563F2B50D6E /* Pods */,
 				66D67F6EC7C6581FB407361C /* Frameworks */,
@@ -112,6 +140,7 @@
 			children = (
 				91EA9218231BD28E00AA428A /* CellSnapshotTesting.app */,
 				91EA922C231BD29100AA428A /* CellSnapshotTestingTests.xctest */,
+				FC6D0CEA25E8F3E100597BC1 /* CellSnapshotTestingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +176,28 @@
 				91EA923C231C382300AA428A /* TableViewCellSnapshotContainer.swift */,
 				FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */,
 				FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC6D0CEB25E8F3E100597BC1 /* CellSnapshotTestingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC6D0CFF25E8F42400597BC1 /* LabelSnapshotTests.swift */,
+				FC6D0D0025E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift */,
+				FC6D0CFB25E8F42400597BC1 /* Utils */,
+				FC6D0CEE25E8F3E100597BC1 /* Info.plist */,
+				FC6D0CF725E8F42300597BC1 /* CellSnapshotTestingUITests-Bridging-Header.h */,
+			);
+			path = CellSnapshotTestingUITests;
+			sourceTree = "<group>";
+		};
+		FC6D0CFB25E8F42400597BC1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC6D0CFC25E8F42400597BC1 /* ViewSnapshotTestCase.swift */,
+				FC6D0CFD25E8F42400597BC1 /* ViewAssertable.swift */,
+				FC6D0CFE25E8F42400597BC1 /* TableViewCellSnapshotContainer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,13 +243,31 @@
 			productReference = 91EA922C231BD29100AA428A /* CellSnapshotTestingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FC6D0CE925E8F3E100597BC1 /* CellSnapshotTestingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC6D0CF125E8F3E100597BC1 /* Build configuration list for PBXNativeTarget "CellSnapshotTestingUITests" */;
+			buildPhases = (
+				FC6D0CE625E8F3E100597BC1 /* Sources */,
+				FC6D0CE725E8F3E100597BC1 /* Frameworks */,
+				FC6D0CE825E8F3E100597BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC6D0CF025E8F3E100597BC1 /* PBXTargetDependency */,
+			);
+			name = CellSnapshotTestingUITests;
+			productName = CellSnapshotTestingUITests;
+			productReference = FC6D0CEA25E8F3E100597BC1 /* CellSnapshotTestingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		91EA9210231BD28E00AA428A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Sebastian Osiński";
 				TargetAttributes = {
@@ -207,6 +276,11 @@
 					};
 					91EA922B231BD29100AA428A = {
 						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 91EA9217231BD28E00AA428A;
+					};
+					FC6D0CE925E8F3E100597BC1 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = 91EA9217231BD28E00AA428A;
 					};
 				};
@@ -226,6 +300,7 @@
 			targets = (
 				91EA9217231BD28E00AA428A /* CellSnapshotTesting */,
 				91EA922B231BD29100AA428A /* CellSnapshotTestingTests */,
+				FC6D0CE925E8F3E100597BC1 /* CellSnapshotTestingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +317,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		91EA922A231BD29100AA428A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6D0CE825E8F3E100597BC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,6 +419,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC6D0CE625E8F3E100597BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6D0D0325E8F42400597BC1 /* TableViewCellSnapshotContainer.swift in Sources */,
+				FC6D0D0525E8F42400597BC1 /* MessageTableViewCellSnapshotTests.swift in Sources */,
+				FC6D0D0225E8F42400597BC1 /* ViewAssertable.swift in Sources */,
+				FC6D0D0425E8F42400597BC1 /* LabelSnapshotTests.swift in Sources */,
+				FC6D0D0125E8F42400597BC1 /* ViewSnapshotTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -344,6 +438,11 @@
 			isa = PBXTargetDependency;
 			target = 91EA9217231BD28E00AA428A /* CellSnapshotTesting */;
 			targetProxy = 91EA922D231BD29100AA428A /* PBXContainerItemProxy */;
+		};
+		FC6D0CF025E8F3E100597BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91EA9217231BD28E00AA428A /* CellSnapshotTesting */;
+			targetProxy = FC6D0CEF25E8F3E100597BC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -567,6 +666,51 @@
 			};
 			name = Release;
 		};
+		FC6D0CF225E8F3E100597BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CellSnapshotTestingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = navartis.CellSnapshotTestingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CellSnapshotTestingUITests/CellSnapshotTestingUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CellSnapshotTesting;
+			};
+			name = Debug;
+		};
+		FC6D0CF325E8F3E100597BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CellSnapshotTestingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = navartis.CellSnapshotTestingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CellSnapshotTestingUITests/CellSnapshotTestingUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CellSnapshotTesting;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +737,15 @@
 			buildConfigurations = (
 				91EA9239231BD29100AA428A /* Debug */,
 				91EA923A231BD29100AA428A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6D0CF125E8F3E100597BC1 /* Build configuration list for PBXNativeTarget "CellSnapshotTestingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC6D0CF225E8F3E100597BC1 /* Debug */,
+				FC6D0CF325E8F3E100597BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
