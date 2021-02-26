@@ -62,8 +62,8 @@ class LabelSnapshotTests: FBSnapshotTestCase {
 
 class SnapshotContainer<View: UIView>: UIView {
     let view: View
-    
-    init(_ view: View, width: CGFloat) {
+
+    init(_ view: View, width: CGFloat, height: CGFloat?) {
         self.view = view
         
         super.init(frame: .zero)
@@ -72,17 +72,25 @@ class SnapshotContainer<View: UIView>: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(view)
-        
-        NSLayoutConstraint.activate([
+
+        var constraints: [NSLayoutConstraint] = [
             view.topAnchor.constraint(equalTo: topAnchor),
             view.bottomAnchor.constraint(equalTo: bottomAnchor),
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
             view.widthAnchor.constraint(equalToConstant: width)
-        ])
+        ]
+
+        if let height = height {
+            constraints.append(view.heightAnchor.constraint(equalToConstant: height))
+        }
+
+        NSLayoutConstraint.activate(constraints)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
