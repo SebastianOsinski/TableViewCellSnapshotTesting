@@ -9,7 +9,7 @@
 import FBSnapshotTestCase
 @testable import CellSnapshotTesting
 
-class LabelSnapshotTests: FBSnapshotTestCase {
+class LabelSnapshotTests: ViewSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         view.backgroundColor = .green
         view.frame.size = CGSize(width: 100, height: 100)
         
-        FBSnapshotVerifyView(view)
+        assertView(view)
     }
     
     func testLabel() {
@@ -33,7 +33,7 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         
         label.sizeToFit()
         
-        FBSnapshotVerifyView(label)
+        assertView(label)
     }
     
 //    func testLabelWithoutNewlines() {
@@ -54,9 +54,9 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         label.numberOfLines = 0
         label.text = "ABC DEF GHI"
         
-        let container = SnapshotContainer<UILabel>(label, width: 80)
+        let container = ViewTestingContainer<UILabel>(label, width: 80, height: nil)
         
-        FBSnapshotVerifyView(container)
+        assertView(container)
     }
 }
 
@@ -94,3 +94,5 @@ class SnapshotContainer<View: UIView>: UIView {
     }
 }
 
+// We have TableViewCellSnapshotContainer. So ViewTestingContainer is the most relevant name for views container
+typealias ViewTestingContainer = SnapshotContainer
