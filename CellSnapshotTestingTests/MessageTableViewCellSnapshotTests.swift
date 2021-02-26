@@ -9,7 +9,7 @@
 @testable import CellSnapshotTesting
 import FBSnapshotTestCase
 
-class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
+class MessageTableViewCellSnapshotTests: ViewSnapshotTestCase {
     override func setUp() {
         super.setUp()
         
@@ -31,8 +31,8 @@ class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
             cell.label.text = "Short message"
             cell.avatar.backgroundColor = .green
         })
-        
-        FBSnapshotVerifyView(container)
+
+        assertView(container)
     }
     
     func testCellWithMultilineText() {
@@ -41,6 +41,6 @@ class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
             cell.avatar.backgroundColor = .green
         })
         
-        FBSnapshotVerifyView(container)
+        assertView(container)
     }
 }

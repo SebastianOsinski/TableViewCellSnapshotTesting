@@ -18,6 +18,8 @@
 		91EA9243231D8B2000AA428A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA9242231D8B2000AA428A /* MessageTableViewCell.swift */; };
 		91EA9245231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA9244231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift */; };
 		A97286F35EAFA9AA9619BA2A /* Pods_CellSnapshotTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */; };
+		FC6D0CDA25E8EDEF00597BC1 /* ViewAssertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */; };
+		FC6D0CE325E8F25900597BC1 /* ViewSnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		91EA9244231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		CFCCBD843B7B56070BB9E6DF /* Pods-CellSnapshotTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellSnapshotTesting.debug.xcconfig"; path = "Target Support Files/Pods-CellSnapshotTesting/Pods-CellSnapshotTesting.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AAF1EED3C2D2341E85AD8C /* Pods_CellSnapshotTestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellSnapshotTestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssertable.swift; sourceTree = "<group>"; };
+		FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSnapshotTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				91EA923C231C382300AA428A /* TableViewCellSnapshotContainer.swift */,
+				FC6D0CD925E8EDEF00597BC1 /* ViewAssertable.swift */,
+				FC6D0CE225E8F25900597BC1 /* ViewSnapshotTestCase.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -323,9 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6D0CDA25E8EDEF00597BC1 /* ViewAssertable.swift in Sources */,
 				91EA9245231D8C5F00AA428A /* MessageTableViewCellSnapshotTests.swift in Sources */,
 				91EA9231231BD29100AA428A /* LabelSnapshotTests.swift in Sources */,
 				91EA923D231C382300AA428A /* TableViewCellSnapshotContainer.swift in Sources */,
+				FC6D0CE325E8F25900597BC1 /* ViewSnapshotTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

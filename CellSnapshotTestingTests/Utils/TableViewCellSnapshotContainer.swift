@@ -13,7 +13,7 @@ final class TableViewCellSnapshotContainer<Cell: UITableViewCell>: UIView, UITab
     typealias CellConfigurator = (_ cell: Cell) -> ()
     typealias HeightResolver = ((_ width: CGFloat) -> (CGFloat))
 
-    private let tableView = SnapshotTableView()
+    public let tableView = SnapshotTableView()
     private let configureCell: (Cell) -> ()
     private let heightForWidth: ((CGFloat) -> CGFloat)?
     
@@ -37,6 +37,9 @@ final class TableViewCellSnapshotContainer<Cell: UITableViewCell>: UIView, UITab
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(Cell.self, forCellReuseIdentifier: "Cell")
+
+        // For clear color cell background detection
+        tableView.backgroundColor = .red
         
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
@@ -88,5 +91,15 @@ final class SnapshotTableView: UITableView {
         
         // width is defined by container's width, height should be same as content height (cell's height)
         return CGSize(width: UIView.noIntrinsicMetric, height: contentSize.height)
+    }
+}
+
+extension TableViewCellSnapshotContainer: ViewAssertable {
+    func container() -> UIView {
+        self
+    }
+
+    func viewForAssertion() -> UIView {
+        tableView.visibleCells.first!
     }
 }
