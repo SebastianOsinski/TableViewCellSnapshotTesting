@@ -13,4 +13,10 @@ target 'CellSnapshotTesting' do
     pod 'iOSSnapshotTestCase'
   end
 
+  target 'CellSnapshotTestingUITests' do
+    inherit! :search_paths
+
+    pod 'iOSSnapshotTestCase'
+  end
+
 end

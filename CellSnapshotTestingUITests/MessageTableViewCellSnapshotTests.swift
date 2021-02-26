@@ -6,10 +6,10 @@
 //  Copyright © 2019 Sebastian Osiński. All rights reserved.
 //
 
-@testable import CellSnapshotTesting
+import OwnUIKit
 import FBSnapshotTestCase
 
-class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
+class MessageTableViewCellSnapshotTests: ViewSnapshotTestCase {
     override func setUp() {
         super.setUp()
         
@@ -31,8 +31,8 @@ class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
             cell.label.text = "Short message"
             cell.avatar.backgroundColor = .green
         })
-        
-        FBSnapshotVerifyView(container)
+
+        assertView(container)
     }
     
     func testCellWithMultilineText() {
@@ -41,6 +41,6 @@ class MessageTableViewCellSnapshotTests: FBSnapshotTestCase {
             cell.avatar.backgroundColor = .green
         })
         
-        FBSnapshotVerifyView(container)
+        assertView(container)
     }
 }

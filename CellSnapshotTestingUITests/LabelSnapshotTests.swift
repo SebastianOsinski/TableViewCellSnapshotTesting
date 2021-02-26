@@ -9,7 +9,7 @@
 import FBSnapshotTestCase
 @testable import CellSnapshotTesting
 
-class LabelSnapshotTests: FBSnapshotTestCase {
+class LabelSnapshotTests: ViewSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         view.backgroundColor = .green
         view.frame.size = CGSize(width: 100, height: 100)
         
-        FBSnapshotVerifyView(view)
+        assertView(view)
     }
     
     func testLabel() {
@@ -33,7 +33,7 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         
         label.sizeToFit()
         
-        FBSnapshotVerifyView(label)
+        assertView(label)
     }
     
 //    func testLabelWithoutNewlines() {
@@ -54,16 +54,16 @@ class LabelSnapshotTests: FBSnapshotTestCase {
         label.numberOfLines = 0
         label.text = "ABC DEF GHI"
         
-        let container = SnapshotContainer<UILabel>(label, width: 80)
+        let container = ViewTestingContainer<UILabel>(label, width: 80, height: nil)
         
-        FBSnapshotVerifyView(container)
+        assertView(container)
     }
 }
 
 class SnapshotContainer<View: UIView>: UIView {
     let view: View
-    
-    init(_ view: View, width: CGFloat) {
+
+    init(_ view: View, width: CGFloat, height: CGFloat?) {
         self.view = view
         
         super.init(frame: .zero)
@@ -72,17 +72,27 @@ class SnapshotContainer<View: UIView>: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(view)
-        
-        NSLayoutConstraint.activate([
+
+        var constraints: [NSLayoutConstraint] = [
             view.topAnchor.constraint(equalTo: topAnchor),
             view.bottomAnchor.constraint(equalTo: bottomAnchor),
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
             view.widthAnchor.constraint(equalToConstant: width)
-        ])
+        ]
+
+        if let height = height {
+            constraints.append(view.heightAnchor.constraint(equalToConstant: height))
+        }
+
+        NSLayoutConstraint.activate(constraints)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// We have TableViewCellSnapshotContainer. So ViewTestingContainer is the most relevant name for views container
+typealias ViewTestingContainer = SnapshotContainer
